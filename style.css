@@ -1,0 +1,297 @@
+html {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* card */
+
+.kartyak {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.kartya {
+    height: 550px;
+    width: 29%;
+    margin: 10px;
+    background-color: white;
+    text-align: left;
+    position: relative;
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.kartya:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+    .kartya {
+        width: 90%;
+        height: 600px;
+    }
+}
+
+.btncard{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: 0.3s ease;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.cardb{
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: auto;
+    text-align: center;
+    height: 40px;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.cardb:hover{
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.textcard {
+    padding-left: 5%;
+}
+
+
+/* nav */
+
+nav {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+nav ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+nav ul li:hover {
+    background-color: rgb(227, 227, 227);
+
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background: #000000;
+    text-align: right;
+    box-sizing: border-box;
+    color: white;
+    font-size: 30px;
+    display: none;
+}
+
+@media (max-width:768px) {
+    .toggle {
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        transition: transform 0.3s ease;
+        transition: background-color 0.5s ease;
+
+    }
+    nav ul li:hover{
+        transform: scale(1.05);
+        background-color: rgb(227, 227, 227);
+    }
+
+    .active {
+        display: block;
+    }
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 253, 253);
+    margin: 6px 0;
+}
+
+.menu{
+        transition: transform 0.3s ease;
+        width: fit-content;
+}
+
+.menu:hover{
+    transform: scale(1.15);
+}
+
+
+
+/* paralax */
+
+.parallax{
+    background-image: url(kepek/backround-steampunk.png);
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.parallax1{
+    min-height: 300px;
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(kepek/backround-steampunk.png);
+}
+
+
+
+/* sticky header */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header{
+    z-index: 1;
+}
+
+
+
+/* chat */
+
+.open-button {
+    background-color: #363636;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+  
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+  
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+  
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+  
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+  
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+  
+.form-container .cancel {
+    background-color: red;
+}
+  
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+
+/* darkmode
+
+.dark-mode{
+    background-color: cyan;
+} */

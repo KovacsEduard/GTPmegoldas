@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT megoldás</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header" id="myHeader">
+        <nav>
+            <div class="toggle">
+                <div class="menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul>
+                <li><a href="https://sites.google.com/view/webalapok-eduard">WEB-Alapok</a></li>
+                <li><a href="https://digisulim.hu/">Digisulim</a></li>
+                <li><a href="https://mszgepesz.edupage.org/timetable/">Suli órarend</a></li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+
+        <div class="parallax1">
+            <div class="caption">
+                <span class="border">Cards</span>
+            </div>
+        </div>
+
+        <div class="kartyak">
+            <div class="kartya">
+                <img src="kepek/1foto.png" width="100%">
+                <div class="textcard">
+                    <h4><mark> Blog</mark></h4>
+                    <h2>COMMUNI-THINK!</h2>
+                    <p>Azon ötleteltünk egy havi programtervező megbeszélésen, hogy</p>
+                </div>
+                <button class="cardb"><a class="btncard" href=""><b>TOVÁBB</b></a></button>
+            </div>
+
+            <div class="kartya">
+                <img src="kepek/2foto.png" width="100%">
+                <div class="textcard">
+                    <h4><mark>Események</mark></h4>
+                    <h2>MI A CÉLTUDATOS ÉLET SZÁMODRA? OKT. 31-TŐL</h2>
+                    <p>Szeretnéd megtertani a téli sötétségben is a kreativitásod és... </p>
+
+                </div>
+                <button class="cardb"><a class="btncard" href=""><b>JELENTKEZEM</b></a></button>
+            </div>
+
+            <div class="kartya">
+                <img src="kepek/3foto.png" width="100%">
+                <div class="textcard">
+                    <h4><mark>Ajánlatok</mark></h4>
+                    <h2>KSI ÉS NAGY CSAPATHOZ ILLŐ PRIVÁT IRODÁK A KAPTÁRBAN!</h2>
+                    <p>Itt az új év, bővül a csapatod és kezditek kinőni az eddigi irodátokat?</p>
+                </div>
+                <button class="cardb"><a class="btncard" href=""><b>TOVÁBB</b></a></button>
+            </div>
+        </div>
+
+        <div class="parallax"></div>
+
+        <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+
+    </section>
+
+    <article>
+        <div id="chat">
+            <button class="open-button" onclick="openForm()">Chat</button>
+
+            <div class="chat-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <h1>Chat</h1>
+
+                    <label for="msg"><b>Message</b></label>
+                    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                    <button type="submit" class="btn">Send</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+
+    </article>
+
+    <!-- header -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu').click(function () {
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
+
+    <!-- sticky header -->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <!-- chat -->
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+    <!-- drak mode
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script> -->
+
+</body>
+
+</html>
